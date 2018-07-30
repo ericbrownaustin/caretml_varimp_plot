@@ -1,0 +1,11 @@
+#script to install all missing dependencies for mlr
+library(mlr)
+
+#list all learners
+learners <- listLearners()
+
+#install uninstalled learners
+un.learners <- subset(learners, installed=="FALSE")
+un.learners <- unique(un.learners$package)
+
+install.packages(un.learners)
