@@ -1,3 +1,18 @@
+# script to install all missing dependencies for mlr
+
+```#script to install all missing dependencies for mlr
+library(mlr)
+
+#list all learners
+learners <- listLearners()
+
+#install uninstalled learners
+un.learners <- subset(learners, installed=="FALSE")
+un.learners <- unique(un.learners$package)
+
+install.packages(un.learners)
+```
+
 # caretml_varimp_plot
 Chart variable importance for a model using caret
 
