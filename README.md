@@ -42,4 +42,4 @@ ggplot(head(vi2,20), aes(x = reorder(vars, Overall), y=Overall)) +
 #all variables
 ggplot(vi2, aes(x = reorder(vars, Overall), y=Overall)) + 
   geom_bar(stat = 'identity') +
-  coord_flip()```
+  coord_flip()
